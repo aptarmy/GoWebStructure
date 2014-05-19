@@ -1,27 +1,15 @@
 package datastruct
 
-type FullData struct {
-	Db  Database
-	Web Web
-}
-
-type Database struct {
-	Person Person
-}
-type Person struct {
-	Fname    string
-	Lname    string
-	Location string
-}
-
 type Web struct {
 	Head    Head
 	Header  Header
 	Section Section
+	Other   map[string]string
 }
 type Head struct {
-	Title string
-	Inc   string
+	Title   string
+	Inc     string
+	IncFile string
 }
 type Header struct {
 	Title    string
@@ -32,6 +20,12 @@ type Section struct {
 	Content string
 }
 
-func GetData() FullData {
-	return FullData{}
+type Db struct {
+	Audio Audio
+}
+type Audio struct {
+	ID      int64
+	AudName string
+	AudDsc  string
+	BlobKey string
 }

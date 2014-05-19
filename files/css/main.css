@@ -1,0 +1,6 @@
+form td{
+	padding: 5px;
+}
+form td:nth-child(1){
+	text-align: right;
+}
